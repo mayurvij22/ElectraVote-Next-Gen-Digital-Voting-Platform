@@ -16,6 +16,9 @@ A simple voting application built using the MERN (MongoDB, Express, React, Node.
 - **Authentication (Optional)**: JWT, bcrypt  
 
 ## Installation & Setup
+![image](https://github.com/user-attachments/assets/f6cf1815-32f6-4c8a-a9ca-971e0f7592f6)
+![image](https://github.com/user-attachments/assets/4bbee0a6-6b1c-44e0-87e3-02c85ab16f3b)
+![image](https://github.com/user-attachments/assets/95e1abbd-a292-4e94-943f-c2a9cf84d583)
 
 ### 1. Clone the Repository
 ```sh
