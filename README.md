@@ -1,28 +1,26 @@
-# Poll App
- 
-# MERN Task Manager
+# MERN Voting Application
 
-A simple Task Manager application built using the MERN (MongoDB, Express, React, Node.js) stack. It allows users to create, read, update, and delete (CRUD) tasks.
+A simple voting application built using the MERN (MongoDB, Express, React, Node.js) stack. It allows users to create polls, vote on options, and view results in real-time.
 
 ## Features
-- Add new tasks
-- View all tasks
-- Edit existing tasks
-- Mark tasks as completed
-- Delete tasks
+- Create a new poll with multiple options  
+- Vote on an existing poll  
+- View real-time poll results  
+- User authentication (Optional)  
+- Admin panel for managing polls (Optional)  
 
 ## Technologies Used
-- **Frontend**: React, Axios, Tailwind CSS
-- **Backend**: Node.js, Express.js, MongoDB, Mongoose
-- **Database**: MongoDB (Atlas or Local)
-- **Authentication (Optional)**: JWT, bcrypt
+- **Frontend**: React, Axios, Tailwind CSS  
+- **Backend**: Node.js, Express.js, MongoDB, Mongoose  
+- **Database**: MongoDB (Atlas or Local)  
+- **Authentication (Optional)**: JWT, bcrypt  
 
 ## Installation & Setup
 
 ### 1. Clone the Repository
 ```sh
 git clone <repository-url>
-cd mern-task-manager
+cd mern-voting-app
 2. Backend Setup
 sh
 Copy
