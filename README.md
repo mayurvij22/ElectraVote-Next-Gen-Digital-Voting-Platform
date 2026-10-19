@@ -1,129 +1,84 @@
-Voting System (MERN Stack)
+<div align="center">
 
-Description
+# 🗳️ ElectraVote: Digital Polling Platform
 
-The Voting System is a web application built using the MERN stack (MongoDB, Express.js, React, Node.js) that allows users to vote on various topics securely. The system ensures authentication and prevents duplicate voting.
+**Create polls, cast one vote per poll and watch the results update. Built with the MERN stack and Redux.**
 
-Features
+![React](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=black)
+![Redux](https://img.shields.io/badge/Redux%20Toolkit-764ABC?logo=redux&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?logo=nodedotjs&logoColor=white)
+![Express](https://img.shields.io/badge/Express-000000?logo=express&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?logo=mongodb&logoColor=white)
+![CI](https://img.shields.io/badge/CI-GitHub%20Actions-2088FF?logo=githubactions&logoColor=white)
 
-User authentication (JWT-based login/signup)
+### [🌐 Live demo](https://poll-app-delta.vercel.app)
 
-Role-based access control (Admin & Voter)
+</div>
 
-Create and manage voting polls
+---
 
-Cast votes securely (one vote per user per poll)
+## ✨ Features
 
-Real-time results update
+- **Sign up and log in** with JWT authentication
+- **Create polls** with multiple options, and **delete** your own polls
+- **Vote** on any poll, **one vote per user per poll** (enforced on the server)
+- **Change your mind**: remove your vote and vote again
+- **Results** shown as circular and horizontal progress bars
+- Browse all polls on the homepage, or open a single poll at `/polls/:pollId`
+- Global state with **Redux Toolkit**, and toast notifications
+- GitHub Actions workflow for Node.js CI
 
-Responsive UI using React
+## 📡 API (`/api/v1`)
 
-Tech Stack
+| Method | Endpoint | Description |
+|:---:|---|---|
+| `POST` | `/user/signup` · `/user/login` | Authentication |
+| `GET` | `/polls/fetchAllPolls` | List all polls |
+| `POST` | `/polls/fetchRequiredPoll` | Get a single poll |
+| `POST` | `/polls/createPoll` | Create a poll |
+| `DELETE` | `/polls/deletePoll` | Delete a poll |
+| `POST` | `/polls/castVote` | Vote on an option |
+| `DELETE` | `/polls/removeVote` | Remove your vote |
 
-Frontend:
+## 🚀 Run locally
 
-React.js
+```bash
+git clone https://github.com/mayurvij22/ElectraVote-Next-Gen-Digital-Voting-Platform.git
+cd ElectraVote-Next-Gen-Digital-Voting-Platform
+```
 
-Redux (for state management)
+`server/.env`:
 
-React Router (for navigation)
+```env
+PORT=4000
+DB_URL=your_mongodb_uri
+JWT_SECRET=a-long-random-string
+```
 
-Tailwind CSS / Bootstrap (for styling)
+Frontend `.env` (repo root):
 
-Axios (for API requests)
+```env
+REACT_APP_SERVER_BASE_URL=http://localhost:4000   # the app appends /api/v1
+```
 
-Backend:
+```bash
+cd server && npm install && npm run dev
+cd .. && npm install && npm start      # http://localhost:3000
+```
 
-Node.js
+## 🛠️ Tech stack
 
-Express.js
+| Layer | Technology |
+|---|---|
+| Frontend | React (CRA), Redux Toolkit, React Router, Axios, react-hot-toast |
+| Backend | Node.js, Express, Mongoose, JWT, cookie-parser, Socket.io |
+| Database | MongoDB |
+| CI and hosting | GitHub Actions, Vercel |
 
-MongoDB (with Mongoose ODM)
+---
 
-JSON Web Tokens (JWT) for authentication
+<div align="center">
 
-bcrypt.js (for password hashing)
+Made by **[Mayur Patil](https://github.com/mayurvij22)**
 
-cors (for cross-origin requests)
-
-dotenv (for environment variables)
-
-Installation
-
-Prerequisites
-
-Ensure you have the following installed:
-
-Node.js (>=14.x)
-
-MongoDB
-
-Setup Instructions
-
-1. Clone the repository
-
-git clone https://github.com/your-username/voting-system.git
-cd voting-system
-
-2. Backend Setup
-
-cd backend
-npm install
-
-Create a .env file inside the backend directory and add the following:
-
-PORT=5000
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret_key
-
-Run the backend server:
-
-npm start
-
-3. Frontend Setup
-
-cd ../frontend
-npm install
-
-Create a .env file inside the frontend directory and add:
-
-REACT_APP_API_URL=http://localhost:5000
-
-Run the frontend server:
-
-npm start
-
-API Endpoints
-
-Authentication
-
-POST /api/auth/register - Register a new user
-
-POST /api/auth/login - Login and get a token
-
-Polls
-
-POST /api/polls - Create a new poll (Admin only)
-
-GET /api/polls - Get all polls
-
-GET /api/polls/:id - Get poll details
-
-POST /api/polls/:id/vote - Vote on a poll
-
-Usage
-
-Sign up or log in.
-
-Browse available polls.
-
-Cast your vote.
-
-
-
-## Installation & Setup
-![image](https://github.com/user-attachments/assets/f6cf1815-32f6-4c8a-a9ca-971e0f7592f6)
-![image](https://github.com/user-attachments/assets/4bbee0a6-6b1c-44e0-87e3-02c85ab16f3b)
-![image](https://github.com/user-attachments/assets/95e1abbd-a292-4e94-943f-c2a9cf84d583)
-
-
+</div>
